@@ -66,14 +66,15 @@ public class SeatsurfingMacro implements Macro {
         } else {
             String jwt = JWT
                 .create()
-                .withClaim("user", user.getName())
+                //.withClaim("user", user.getName())
+                .withClaim("user", user.getEmail())
                 .withClaim("key", user.getKey().getStringValue())
                 .sign(Algorithm.HMAC256(config.getSharedSecret()));
                 url += "confluence/" + config.getOrgId() + "/" + jwt;
         }
 
         String res = "";
-        res += "<iframe width=\"100%\" height=\"500px\" src=\""+url+"\" frameborder=\"0\">";
+        res += "<iframe width=\"100%\" height=\"800px\" src=\""+url+"\" frameborder=\"0\">";
         res += "</iframe>";
         return res;
     }

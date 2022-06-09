@@ -11,6 +11,8 @@ The plugin basically renders an iFrame and loads the Seatsurfing Booking UI from
 * atlas-run   -- installs this plugin into the product and starts it on localhost
 * atlas-debug -- same as atlas-run, but allows a debugger to attach at port 5005
 * atlas-help  -- prints description for all commands in the SDK
+* atlas-compile  -- compiles the sources
+* atlas-package  -- creates the jar package
 
 Full documentation is always available at:
 
